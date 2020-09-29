@@ -1,44 +1,63 @@
 import React from "react";
+import '../Schedule/Schedule.css'
 
 export default function ContactUs(props) {
     return (
         <div>
-            <div className="slogan is-family-primary has-text-centered has-text-weight-bold" style={{ fontSize: '20px', marginBottom: '30px', marginTop: '30px' }}>
+            <section id="schedule-service">
+                <div class="flex container">
+                    <div class="upcoming-classes-box">
+                        <strong>Next</strong>
+                        <h4>Upcoming Events</h4>
+                        <table>
+                            <tr>
+                                <td><img src="https://onclickwebdesign.com/wp-content/uploads/stopwatch.png"
+                                    alt="Stopwatch" /></td>
+                                <td>Gym Fitness</td>
+                                <td>11:00 - 12:00</td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://onclickwebdesign.com/wp-content/uploads/stopwatch.png"
+                                    alt="Stopwatch" /></td>
+                                <td>Cardio Kickback</td>
+                                <td>11:00 - 12:00</td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://onclickwebdesign.com/wp-content/uploads/stopwatch.png"
+                                    alt="Stopwatch" /></td>
+                                <td>Plates</td>
+                                <td>12:00 - 1:00</td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://onclickwebdesign.com/wp-content/uploads/stopwatch.png"
+                                    alt="Stopwatch" /></td>
+                                <td>Spining</td>
+                                <td>1:00 - 2:00</td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://onclickwebdesign.com/wp-content/uploads/stopwatch.png"
+                                    alt="Stopwatch" /></td>
+                                <td>Yoga</td>
+                                <td>2:00 - 3:00</td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://onclickwebdesign.com/wp-content/uploads/stopwatch.png"
+                                    alt="Stopwatch" /></td>
+                                <td>Zumba</td>
+                                <td>4:00 - 5:00</td>
+                            </tr>
 
-                <div class="container is-fluid" style={{ width: '50%' }}>
-                    <div class="notification">
-                        <strong>Hours of Operation</strong>
+                        </table>
                     </div>
-                    <h1><strong>M-F: </strong>9am-9pm EST</h1>
-                    <h1><strong>Sat: </strong>9am-12am EST</h1>
-                    <h1><strong>Sun: </strong>9am-9pm EST</h1>
-                </div>
-                <br />
-                <div>
-                    <br />
-                    <div class="container is-fluid" style={{ width: '50%' }}>
-                        <div class="notification">
-                            <strong>Contact Us</strong>
-                            <br />
+                    <div class="membership-cards-box">
+                        <div class="inner-container">
+                            <strong>NEXT</strong>
+                            <h4>Membership Deals</h4>
+                            <h2>25% <span>Discount</span></h2>
                         </div>
-                        <h1><strong>By Mail</strong></h1>
-                        <h1>123 Anywhere St.</h1>
-                        <h1>Anytown, ST 12345</h1>
                     </div>
-                    <br />
-                    <div>
-                        <h1><strong>By Phone</strong></h1>
-                        <h1>555-555-5555</h1>
-                    </div>
-                    <br />
-                    <h1 style={{ marginBottom: '100px' }}>
-                        <strong>Email</strong>
-                        <br />
-                  To contact us via email, please fill out a <a href="/contactusform" style={{ margin: 'auto' }}>
-                            contact form</a>.</h1>
-                    <br />
                 </div>
-            </div>
+            </section>
         </div>
     );
 }
