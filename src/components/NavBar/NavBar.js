@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import { MenuItems } from '../NavBar/MenuItems'
 import LogoutButton from '../Logout/logout-button'
 import './NavBar.css';
+import Auth0 from '../Auth0/Auth0.js'
+import Auth0Logout from '../Auth0/AuthoLogout'
 
 // import { useAuth0 } from '@auth0/auth0-react';
 // import LoginButton from '../Login/Login-button';
@@ -68,11 +70,11 @@ function Navbar() {
                         </li>
                         <li className='nav-item'>
                             <Link
-                                to='/service'
+                                to='/profile'
                                 className='nav-links'
                                 onClick={closeMobileMenu}
                             >
-                                Services
+                                profile
               </Link>
                         </li>
 
@@ -100,29 +102,14 @@ function Navbar() {
                         </li>
 
 
-                        <li>
-                            <Link
-                                to='/sign-up'
-                                className='nav-links-mobile'
-                                onClick={closeMobileMenu}
-                            >
-                                Sign up
-              </Link>
-                        </li>
-
-                        <li>
-                            <Link
-                                to='/log-in'
-                                className='nav-links-mobile'
-                                onClick={closeMobileMenu}
-                            >
-                                Login
-              </Link>
-                        </li>
+                    
                     </ul>
-                    {button && <Button buttonStyle='btn--outline'> Sign up </Button>}
-
-                    {button && <Button buttonStyle='btn--outline'> Login </Button>}
+                    <li>
+                        <Auth0Logout />
+                    </li>
+                    <li>
+                        <Auth0 />
+                    </li>
                 </div>
             </nav>
         </>

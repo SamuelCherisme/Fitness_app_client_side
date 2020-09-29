@@ -13,7 +13,7 @@ export default function ContactUs(props) {
                             <tr>
                                 <td><img src="https://onclickwebdesign.com/wp-content/uploads/stopwatch.png"
                                     alt="Stopwatch" /></td>
-                                <td>Gym Fitness</td>
+                                <td>Fitness</td>
                                 <td>11:00 - 12:00</td>
                             </tr>
                             <tr>
