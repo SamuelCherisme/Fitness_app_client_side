@@ -125,8 +125,8 @@ function Navbar() {
               </Link>
                         </li>
                     </ul>
-                    {button && <Button buttonStyle='btn--outline'><Auth0/></Button>}
-                    {button && <Button buttonStyle='btn--outline'><Auth0Logout/></Button>}
+                    <Auth0/>
+                    <Auth0Logout/>
                     
                 </div>
             </nav>

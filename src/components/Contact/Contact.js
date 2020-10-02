@@ -1,47 +1,72 @@
-import React from "react";
-import '../../App.css'
-import '../Contact/Contact.css'
-import Footer from '../Footer/Footer';
+// import React from "react";
+import React, { useState, useEffect } from "react";
+import "../../components/Contact/Contact.css";
+import { db } from "../../firebase";
 
+const Contact = () => {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
 
-export default function ContactUsForm(props) {
+    const [loader, setLoader] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setLoader(true);
+
+        db.collection("contacts")
+            .add({
+                name: name,
+                email: email,
+                message: message,
+            })
+            .then(() => {
+                setLoader(false);
+                alert("Your message has been submitted👍");
+            })
+            .catch((error) => {
+                alert(error.message);
+                setLoader(false);
+            });
+
+        setName("");
+        setEmail("");
+        setMessage("");
+    };
+
     return (
-        <div className="bg-img">
-            <h1>Contact Us</h1>
-            <form>
-                <div class='field' style={{ width: '400px', display: 'block', margin: '0 auto' }}>
-                    <label htmlFor="firstName" class='label'>
-                        First Name
-                    </label>
-                    <input class='input' type="text" name="firstName" placeholder='Type Your First Name Here' required onChange={props.handleInput} />
-                </div>
-                <div class='field' style={{ width: '400px', display: 'block', margin: '0 auto', marginTop: '20px' }}>
-                    <label htmlFor="lastName" class='label'>
-                        Last Name
-                    </label>
-                    <input class='input' type="text" name="lastName" placeholder='Type Your Last Name Here' required onChange={props.handleInput} />
-                </div>
-                
-                <div class='field' style={{ width: '400px', display: 'block', margin: '0 auto', marginTop: '20px' }}>
-                    <label htmlFor="email" class='label'>
-                        Email
-                    </label>
-                    <input class='input' type="text" name="email" placeholder='Type Your Email Here' required onChange={props.handleInput} />
-                </div>
-                <div class='field' style={{ width: '400px', display: 'block', margin: '0 auto', marginTop: '20px' }}>
-                    <label htmlFor="message" class='label'>
-                        Send Feedback
-                    </label>
-                    <textarea class='input' id="subject" name="subject" placeholder="Type Your Message Here" required onChange={props.handleInput} style={{ width: '400px', height: '200px' }}>
-                    </textarea>
-                </div>
-                <div class='control' style={{ width: '400px', display: 'block', margin: '0 auto', marginTop: '30px', marginBottom: '70px' }}>
-                    <input class='button is-info' value="Submit" type="submit" onClick={props.handleInput} />
-                </div>
-            </form>
-            
-        </div>
-        
+        <form className="form" onSubmit={handleSubmit}>
+            <h1>Contact Us 🤳</h1>
 
+            <label>Name</label>
+            <input
+                placeholder="Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+            />
+
+            <label>Email</label>
+            <input
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+            />
+
+            <label>Message</label>
+            <textarea
+                placeholder="Message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+            ></textarea>
+
+            <button
+                type="submit"
+                style={{ background: loader ? "#0000" : "" }}
+            >
+                Submit
+      </button>
+        </form>
     );
-}
+};
+
+export default Contact;

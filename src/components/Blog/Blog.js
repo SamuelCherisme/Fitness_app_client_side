@@ -14,6 +14,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Avatar from '@material-ui/core/Avatar';
 import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
 import Pagination from '@material-ui/lab/Pagination';
+import Footer from '../Footer/Footer'
 
 const useStyles = makeStyles((theme) => ({
     appBar: {
@@ -102,10 +103,10 @@ function App() {
                             </CardActionArea>
                             <CardActions className={classes.cardActions}>
                                 <Box className={classes.author}>
-                                    <Avatar src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+                                    <Avatar src="https://github.com/talltril/hello-world/blob/master/Images/o%20(1).jpg?raw=true" />
                                     <Box ml={2}>
                                         <Typography variant="subtitle2" component="p">
-                                            Guy Clemons
+                                            Micheal Rosidor
                     </Typography>
                                         <Typography variant="subtitle2" color="textSecondary" component="p">
                                             April 28, 2020
@@ -137,10 +138,10 @@ function App() {
                             </CardActionArea>
                             <CardActions className={classes.cardActions}>
                                 <Box className={classes.author}>
-                                    <Avatar src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80" />
+                                    <Avatar src="https://github.com/talltril/hello-world/blob/master/Images/o%20(1).jpg?raw=true" />
                                     <Box ml={2}>
                                         <Typography variant="subtitle2" component="p">
-                                            Guy Clemons
+                                            Micheal Rosidor
                     </Typography>
                                         <Typography variant="subtitle2" color="textSecondary" component="p">
                                             April 21, 2020
@@ -172,10 +173,10 @@ function App() {
                             </CardActionArea>
                             <CardActions className={classes.cardActions}>
                                 <Box className={classes.author}>
-                                    <Avatar src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+                                    <Avatar src="https://github.com/talltril/hello-world/blob/master/Images/o%20(1).jpg?raw=true" />
                                     <Box ml={2}>
                                         <Typography variant="subtitle2" component="p">
-                                            Guy Clemons
+                                            Micheal Rosidor
                     </Typography>
                                         <Typography variant="subtitle2" color="textSecondary" component="p">
                                             April 8, 2020
@@ -207,10 +208,10 @@ function App() {
                             </CardActionArea>
                             <CardActions className={classes.cardActions}>
                                 <Box className={classes.author}>
-                                    <Avatar src="https://images.unsplash.com/photo-1584999734482-0361aecad844?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80" />
+                                    <Avatar src="https://github.com/talltril/hello-world/blob/master/Images/o%20(1).jpg?raw=true" />
                                     <Box ml={2}>
                                         <Typography variant="subtitle2" component="p">
-                                            Guy Clemons
+                                            Micheal Rosidor
                     </Typography>
                                         <Typography variant="subtitle2" color="textSecondary" component="p">
                                             March 23, 2020
@@ -229,6 +230,7 @@ function App() {
                     <Pagination count={1} />
                 </Box>
             </Container>
+            <Footer/>
         </div>
     );
 }

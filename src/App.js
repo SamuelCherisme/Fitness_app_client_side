@@ -6,6 +6,7 @@ import axios from 'axios';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 //import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Footer from './components/Footer/Footer'
 import Home from './components/Home/Home'
 import Service from './components/Servicess/Service'
 import Schedule from './components/Schedule/Schedule'
@@ -16,6 +17,8 @@ import Programs from './components/Programs/programs'
 import Testimonals from "./components/Testimonals/Testimonals";
 import Blog from './components/Blog/Blog'
 import Auth0 from './components/Auth0/Auth0'
+
+
 
 //import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -128,6 +131,7 @@ export default function App(props) {
           
         </Switch>
       </div>
+      
     </Layout>
     
   );
