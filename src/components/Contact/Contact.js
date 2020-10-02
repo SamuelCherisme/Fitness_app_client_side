@@ -1,23 +1,13 @@
 import React from "react";
 import '../../App.css'
 import '../Contact/Contact.css'
+import Footer from '../Footer/Footer';
 
 
 export default function ContactUsForm(props) {
     return (
-        <div>
-            <div className="slogan is-family-primary has-text-centered has-text-weight-bold" style={{ fontSize: '20px', marginBottom: '30' }}>
-                <div class="container is-fluid" style={{ width: '50%' }}>
-                    <div class="notification" style={{ fontSize: '25px', marginBottom: '30px' }}>
-                        <h1 className="contact">
-                            <strong>Contact Form</strong>
-                        </h1>
-                        <h1 style={{ fontSize: '20px', marginTop: '20px' }}>
-                                        Email is the best way to stay in contact with Mr.Fitness!
-                        </h1>
-                    </div>
-                </div>
-            </div>
+        <div className="bg-img">
+            <h1>Contact Us</h1>
             <form>
                 <div class='field' style={{ width: '400px', display: 'block', margin: '0 auto' }}>
                     <label htmlFor="firstName" class='label'>
@@ -49,7 +39,9 @@ export default function ContactUsForm(props) {
                     <input class='button is-info' value="Submit" type="submit" onClick={props.handleInput} />
                 </div>
             </form>
+            
         </div>
+        
 
     );
 }

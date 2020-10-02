@@ -24,6 +24,22 @@ import Auth0Logout from '../Auth0/AuthoLogout'
 // };
 
 
+// const Button = styled.button`
+//   background: transparent;
+//   border-radius: 3px;
+//   border: 2px solid palevioletred;
+//   color: palevioletred;
+//   margin: 0 1em;
+//   padding: 0.25em 1em;
+
+//   ${props =>
+//         props.primary &&
+//         css`
+//       background: palevioletred;
+//       color: white;
+//     `};
+// `
+
 function Navbar() {
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
@@ -50,66 +66,68 @@ function Navbar() {
             <nav className='navbar'>
                 <div className='navbar-container'>
                     <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-                        Mr.Fitness
+                        Strong
             <i class='fab fa-typo3' />
                     </Link>
-
                     <div className='menu-icon' onClick={handleClick}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
                     </div>
-
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-
-
-
                         <li className='nav-item'>
                             <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                                 Home
               </Link>
-
                         </li>
                         <li className='nav-item'>
                             <Link
-                                to='/profile'
+                                to='/about'
                                 className='nav-links'
                                 onClick={closeMobileMenu}
                             >
-                                profile
+                                About
               </Link>
                         </li>
-
+                        <li className='nav-item'>
+                            <Link
+                                to='/programs'
+                                className='nav-links'
+                                onClick={closeMobileMenu}
+                            >
+                                Programs
+              </Link>
+                        </li>
 
                         <li className='nav-item'>
                             <Link
-                                to='/schedule'
+                                to='/blog'
                                 className='nav-links'
                                 onClick={closeMobileMenu}
                             >
-                                Schedule
+                                Blogs
               </Link>
                         </li>
 
-
-
-                        <li className='nav-item'>
+                        <li>
                             <Link
                                 to='/contact-us'
-                                className='nav-links'
+                                className='nav-links-mobile'
                                 onClick={closeMobileMenu}
                             >
                                 Contact Us
               </Link>
+
+                            <Link
+                                to='/profile'
+                                className='nav-links-mobile'
+                                onClick={closeMobileMenu}
+                            >
+                                Profile
+              </Link>
                         </li>
-
-
-                    
                     </ul>
-                    <li>
-                        <Auth0Logout />
-                    </li>
-                    <li>
-                        <Auth0 />
-                    </li>
+                    {button && <Button buttonStyle='btn--outline'><Auth0/></Button>}
+                    {button && <Button buttonStyle='btn--outline'><Auth0Logout/></Button>}
+                    
                 </div>
             </nav>
         </>

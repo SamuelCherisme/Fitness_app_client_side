@@ -9,15 +9,22 @@ import NavBar from './components/NavBar/NavBar';
 import Home from './components/Home/Home'
 import Service from './components/Servicess/Service'
 import Schedule from './components/Schedule/Schedule'
-// import SignUpForm from './components/SignupForm/SignUpForm'
-// import Login from './components/Login/Login-button'
-// import Logout from './components/Logout/logout-button'
-// import Profile from './components/Profile/Profile'
 import About from './components/About/About'
 import Contact from './components/Contact/Contact'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Auth0Profile from './components/Auth0/Auth0Profile'
-// import LogInForm from './components/Login/Login-button';
+import Auth0Profile from './components/Auth0Profile/Auth0Profile'
+import Programs from './components/Programs/programs'
+import Testimonals from "./components/Testimonals/Testimonals";
+import Blog from './components/Blog/Blog'
+import Auth0 from './components/Auth0/Auth0'
+
+//import 'bootstrap/dist/css/bootstrap.min.css';
+
+// const Button = styled.button`
+// font-family: sans-serif;
+// font-size: 1.3rem;
+// border: none;
+// border-radius: 5px;
+// `
 
 
 export default function App(props) {
@@ -54,15 +61,15 @@ export default function App(props) {
             }}
           />}
           <Route
-            path="/contact-us"
+            path="/program"
             render={(props) => {
-              return <Contact />;
+              return <Programs />;
             }}
           />
           <Route
-            path="/schedule"
+            path="/about"
             render={(props) => {
-              return <Schedule />;
+              return <About />;
             }}
           />
           <Route
@@ -79,27 +86,49 @@ export default function App(props) {
             }}
           />
           <Route
-            path="/about"
+            path="/contact-us"
             render={(props) => {
-              return <About/>
+              return <Contact/>
             }}
           />
           <Route
-            path="/"
+            path="/profile"
             render={(props) => {
-              return <Home />
+              return <profile />
             }}
           />
-         
+
+          <Route
+            path="/testimonals"
+            render={(props) => {
+              return <Testimonals />;
+            }}
+          />
+
+          <Route
+            path="/blog"
+            render={(props) => {
+              return <Blog />;
+            }}
+          />
+
+          <Route
+            path="/programs"
+            render={(props) => {
+              return <Programs />;
+            }}
+          />
+
           <Route
             path="/:id"
             render={props => {
               return <Home {...props} />;
             }}
           />
-
+          
         </Switch>
       </div>
     </Layout>
+    
   );
 }

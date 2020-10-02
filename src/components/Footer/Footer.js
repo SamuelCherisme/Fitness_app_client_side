@@ -55,11 +55,11 @@ function Footer() {
                 <div class='social-media-wrap'>
                     <div class='footer-logo'>
                         <Link to='/' className='social-logo'>
-                            Mr.Fitness
+                            Strong Bodies
               <i class='fab fa-typo3' />
                         </Link>
                     </div>
-                    <small class='website-rights'>Mr.Fitness © 2020</small>
+                    <small class='website-rights'>Copyright © Strong Bodiez by Jennifer Smith</small>
                     <div class='social-icons'>
                         <Link
                             class='social-icon-link facebook'
