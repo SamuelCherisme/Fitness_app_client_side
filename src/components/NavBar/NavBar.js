@@ -89,11 +89,11 @@ function Navbar() {
                         </li>
                         <li className='nav-item'>
                             <Link
-                                to='/programs'
+                                to='/profile'
                                 className='nav-links'
                                 onClick={closeMobileMenu}
                             >
-                                Programs
+                                Profile
               </Link>
                         </li>
 
@@ -116,13 +116,13 @@ function Navbar() {
                                 Contact Us
               </Link>
 
-                            <Link
+                            {/* <Link
                                 to='/profile'
                                 className='nav-links-mobile'
                                 onClick={closeMobileMenu}
                             >
                                 Profile
-              </Link>
+              </Link> */}
                         </li>
                     </ul>
                     <Auth0/>

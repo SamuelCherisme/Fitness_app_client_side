@@ -44,10 +44,10 @@ function Footer() {
                    
                     <div class='footer-link-items'>
                         <h2>Social Media</h2>
-                        <Link to='/'>Instagram</Link>
-                        <Link to='/'>Facebook</Link>
-                        <Link to='/'>Youtube</Link>
-                        <Link to='/'>Twitter</Link>
+                        <Link to='/https://www.instagram.com/strongbodiez/'>Instagram</Link>
+                        <Link to='/https://www.facebook.com/Strong-Bodiez-1448317625419756/'>Facebook</Link>
+                        <Link to='/https://www.youtube.com/channel/UCujn4L6rOy53RWlagPtPUww'>Youtube</Link>
+                        <Link to='/https://twitter.com/StrongBodiezFL'>Twitter</Link>
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@ function Footer() {
                     <div class='social-icons'>
                         <Link
                             class='social-icon-link facebook'
-                            to='/'
+                            to='/https://www.facebook.com/Strong-Bodiez-1448317625419756/'
                             target='_blank'
                             aria-label='Facebook'
                         >
@@ -71,7 +71,7 @@ function Footer() {
                         </Link>
                         <Link
                             class='social-icon-link instagram'
-                            to='/'
+                            to='https://www.instagram.com/strongbodiez/'
                             target='_blank'
                             aria-label='Instagram'
                         >
@@ -79,7 +79,7 @@ function Footer() {
                         </Link>
                         <Link
                             class='social-icon-link youtube'
-                            to='/'
+                            to='/https://www.youtube.com/channel/UCujn4L6rOy53RWlagPtPUww'
                             target='_blank'
                             aria-label='Youtube'
                         >
@@ -87,20 +87,13 @@ function Footer() {
                         </Link>
                         <Link
                             class='social-icon-link twitter'
-                            to='/'
-                            target='_blank'
+                            to='/https://twitter.com/StrongBodiezFL'
+                            target='/https://twitter.com/StrongBodiezFL'
                             aria-label='Twitter'
                         >
                             <i class='fab fa-twitter' />
                         </Link>
-                        <Link
-                            class='social-icon-link twitter'
-                            to='/'
-                            target='_blank'
-                            aria-label='LinkedIn'
-                        >
-                            <i class='fab fa-linkedin' />
-                        </Link>
+                        
                     </div>
                 </div>
             </section>

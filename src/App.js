@@ -13,7 +13,7 @@ import Schedule from './components/Schedule/Schedule'
 import About from './components/About/About'
 import Contact from './components/Contact/Contact'
 import Auth0Profile from './components/Auth0Profile/Auth0Profile'
-import Programs from './components/Programs/programs'
+// import Programs from './components/Programs/programs'
 import Testimonals from "./components/Testimonals/Testimonals";
 import Blog from './components/Blog/Blog'
 import Auth0 from './components/Auth0/Auth0'
@@ -36,6 +36,55 @@ export default function App(props) {
 
   const [enter, updateEnter] = useState(false);
 
+  const [fitness, setFitness] = useState([]);
+  const [formInputs, updateFormInputs] = useState({
+    name: '',
+    starsign: '',
+    age: '',
+    img: '',
+    ltl: ''
+  });
+  const getFitness = async () => {
+    try {
+      const response = await fetch('http://localhost:3000/fitnesses');
+      const data = await response.json();
+      setFitness(data)
+    } catch (error) {
+      console.error(error)
+    }
+  }
+  useEffect(
+    () => {
+      (
+        async function () {
+          await getFitness();
+        }
+      )()
+    }, [])
+  const handleChange = (event) => {
+    const updatedFormInputs = Object.assign({}, formInputs, { [event.target.id]: event.target.value })
+    updateFormInputs(updatedFormInputs);
+  }
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.post(
+        'http://localhost:3000/fitnesses',
+        formInputs
+      );
+      const createdFitness = response.data
+      await updateFormInputs({
+        name: '',
+        starsign: '',
+        age: '',
+        img: '',
+        ltl: ''
+      })
+      await setFitness([createdFitness, ...fitness])
+    } catch (error) {
+      console.error(error)
+    }
+  }
   
   const handleEnter = event => {
     event.preventDefault();
@@ -63,12 +112,7 @@ export default function App(props) {
               return <Home handleEnter={handleEnter} />;
             }}
           />}
-          <Route
-            path="/program"
-            render={(props) => {
-              return <Programs />;
-            }}
-          />
+          
           <Route
             path="/about"
             render={(props) => {
@@ -94,12 +138,7 @@ export default function App(props) {
               return <Contact/>
             }}
           />
-          <Route
-            path="/profile"
-            render={(props) => {
-              return <profile />
-            }}
-          />
+          
 
           <Route
             path="/testimonals"
@@ -115,12 +154,12 @@ export default function App(props) {
             }}
           />
 
-          <Route
+          {/* <Route
             path="/programs"
             render={(props) => {
               return <Programs />;
             }}
-          />
+          /> */}
 
           <Route
             path="/:id"
