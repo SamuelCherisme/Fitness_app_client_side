@@ -17,6 +17,8 @@ import Auth0Profile from './components/Auth0Profile/Auth0Profile'
 import Testimonals from "./components/Testimonals/Testimonals";
 import Blog from './components/Blog/Blog'
 import Auth0 from './components/Auth0/Auth0'
+import Edit from './components/Auth0/Auth0Edit'
+const PORT = 'http://localhost:3000'
 
 
 

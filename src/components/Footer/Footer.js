@@ -78,10 +78,7 @@ function Footer() {
                             <i class='fab fa-instagram' />
                         </Link>
                         <Link
-                            class='social-icon-link youtube'
-                            to='/https://www.youtube.com/channel/UCujn4L6rOy53RWlagPtPUww'
-                            target='_blank'
-                            aria-label='Youtube'
+                            
                         >
                             <i class='fab fa-youtube' />
                         </Link>
