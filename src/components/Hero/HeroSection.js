@@ -1,7 +1,8 @@
 import React from 'react';
 import '../../App.css';
-import { Button } from '../Button/Button';
+import  Button  from '../Button/Button';
 import './HeroSection.css';
+
 
 function HeroSection() {
     return (
@@ -9,14 +10,20 @@ function HeroSection() {
             <video src='/' autoPlay loop muted />
             <h1>Stay Strong with Strong Bodies!</h1>
             <p>What are you waiting for?</p>
+            
             <div className='hero-btns'>
-                <Button
+                <a href='https://www.freecodecamp.org/'><Button
                     className='btns'
                     buttonStyle='btn--outline'
                     buttonSize='btn--large'
-                >
-                    GET STARTED!
-        </Button>
+                
+                
+                > GET STARTED!
+                     
+                </Button>
+                
+                </a>
+
                 <Button
                     className='btns'
                     buttonStyle='btn--primary'
@@ -25,6 +32,8 @@ function HeroSection() {
                 >
                     WATCH TRAILER <i className='far fa-play-circle' />
                 </Button>
+
+                {/* <a href='https://www.freecodecamp.org/'><button>Link To freeCodeCamp</button></a> */}
             </div>
         </div>
     );

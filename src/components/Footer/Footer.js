@@ -41,7 +41,7 @@ function Footer() {
                     </div>
                 </div>
                 <div className='footer-link-wrapper'>
-                   
+
                     <div class='footer-link-items'>
                         <h2>Social Media</h2>
                         <Link to='/https://www.instagram.com/strongbodiez/'>Instagram</Link>
@@ -78,7 +78,7 @@ function Footer() {
                             <i class='fab fa-instagram' />
                         </Link>
                         <Link
-                            
+
                         >
                             <i class='fab fa-youtube' />
                         </Link>
@@ -90,7 +90,7 @@ function Footer() {
                         >
                             <i class='fab fa-twitter' />
                         </Link>
-                        
+
                     </div>
                 </div>
             </section>

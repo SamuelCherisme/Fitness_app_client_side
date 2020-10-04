@@ -1,33 +1,33 @@
-import React from 'react'
-import './Button.css'
-import {Link} from 'react-router-dom'
+import React from 'react';
+import '../../App.css';
+import { Button } from './Button';
+import './HeroSection.css';
 
-const STYLES = ['btn--primary', 'btn--outline', 'btn--test'];
-
-const SIZES = ['btn--medium', 'btn--large'];
-
-export const Button = ({
-    children,
-    type,
-    onClick,
-    buttonStyle,
-    buttonSize
-}) => {
-    const checkButtonStyle = STYLES.includes(buttonStyle)
-        ? buttonStyle
-        : STYLES[0];
-
-    const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
-
+function HeroSection() {
     return (
-        <Link to='/profile' className='btn-mobile'>
-            <button
-                className={`btn ${checkButtonStyle} ${checkButtonSize}`}
-                onClick={onClick}
-                type={type}
-            >
-                {children}
-            </button>
-        </Link>
+        <div className='hero-container'>
+            <video src='/' autoPlay loop muted />
+            <h1>Stay Strong with Strong Bodies!</h1>
+            <p>What are you waiting for?</p>
+            <div className='hero-btns'>
+                <Button
+                    className='btns'
+                    buttonStyle='btn--outline'
+                    buttonSize='btn--large'
+                >
+                    GET STARTED!
+        </Button>
+                <Button
+                    className='btns'
+                    buttonStyle='btn--primary'
+                    buttonSize='btn--large'
+                    onClick={console.log('hey')}
+                >
+                    WATCH TRAILER <i className='far fa-play-circle' />
+                </Button>
+            </div>
+        </div>
     );
-};
+}
+
+export default HeroSection;
