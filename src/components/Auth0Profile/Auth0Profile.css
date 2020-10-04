@@ -25,14 +25,16 @@
 }
 
 .card-header{
-  background: #000000;
+  background: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.pixelstalk.net%2Fwp-content%2Fuploads%2F2016%2F10%2FAesthetic-Wallpapers-HD-Free-Download.png&f=1&nofb=1') no-repeat center;
+  background-size: cover;
+  /* background: #000000; */
   padding: 60px 40px;
 }
 
 .pic{
   display: inline-block;
   padding: 8px;
-  background: linear-gradient(130deg, #74b9ff, #fff);
+  background: linear-gradient(130deg, #b9a1b6, #a04b4b);
   margin: auto;
   border-radius: 50%;
   background-size: 200% 200%;
@@ -58,7 +60,7 @@
   display: block;
   width: 100px;
   height: 100px;
-  border-radius: 50%;
+  border-radius: 55%;
 }
 
 .name{
@@ -106,7 +108,7 @@
 }
 
 .card-footer{
-  background: #f4f4f4;
+  background: black;
   padding: 60px 10px;
 }
 
@@ -129,7 +131,7 @@
 }
 
 .border{
-  width: 1px;
+  width: 0px;
   height: 30px;
   background: #bbb;
 }

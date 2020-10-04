@@ -8,7 +8,7 @@ function Footer() {
         <div className='footer-container'>
             <section className='footer-subscription'>
                 <p className='footer-subscription-heading'>
-                    Join the Adventure newsletter to receive our best Fitness deals
+                    Join the Adventure!
         </p>
                 <p className='footer-subscription-text'>
                     You can unsubscribe at any time.
@@ -28,26 +28,22 @@ function Footer() {
             <div class='footer-links'>
                 <div className='footer-link-wrapper'>
                     <div class='footer-link-items'>
-                        <h2>About Us</h2>
-                        <Link to='/sign-up'>Sign Up Now!</Link>
-                        <Link to='/'>Staying Healty Tips</Link>
-                        <Link to='/'>About Mr.Fitness</Link>
-                        <Link to='/'>Terms of Service</Link>
+                       
                     </div>
                     <div class='footer-link-items'>
                         <h2>Contact Us</h2>
-                        <Link to='/'>Contact</Link>
-                        <Link to='/'>Support</Link>
+                        <Link to='/contact'>Contact</Link>
+                        
                     </div>
                 </div>
                 <div className='footer-link-wrapper'>
 
                     <div class='footer-link-items'>
                         <h2>Social Media</h2>
-                        <Link to='/https://www.instagram.com/strongbodiez/'>Instagram</Link>
-                        <Link to='/https://www.facebook.com/Strong-Bodiez-1448317625419756/'>Facebook</Link>
-                        <Link to='/https://www.youtube.com/channel/UCujn4L6rOy53RWlagPtPUww'>Youtube</Link>
-                        <Link to='/https://twitter.com/StrongBodiezFL'>Twitter</Link>
+                        <a href="https://www.instagram.com/strongbodiez/">Instagram <i class='fab fa-instagram' /></a>
+                        <a href="https://www.facebook.com/Strong-Bodiez-1448317625419756/">Facebook <i class='fab fa-facebook-f' /></a>
+                        <a href="https://www.youtube.com/channel/UCujn4L6rOy53RWlagPtPUww">Youtube  <i class='fab fa-youtube' /></a>
+                        <a href="https://twitter.com/StrongBodiezFL">Twitter <i class='fab fa-twitter' /></a>
                     </div>
                 </div>
             </div>
@@ -61,35 +57,7 @@ function Footer() {
                     </div>
                     <small class='website-rights'>Copyright © Strong Bodiez by Jennifer Smith</small>
                     <div class='social-icons'>
-                        <Link
-                            class='social-icon-link facebook'
-                            to='/https://www.facebook.com/Strong-Bodiez-1448317625419756/'
-                            target='_blank'
-                            aria-label='Facebook'
-                        >
-                            <i class='fab fa-facebook-f' />
-                        </Link>
-                        <Link
-                            class='social-icon-link instagram'
-                            to='https://www.instagram.com/strongbodiez/'
-                            target='_blank'
-                            aria-label='Instagram'
-                        >
-                            <i class='fab fa-instagram' />
-                        </Link>
-                        <Link
-
-                        >
-                            <i class='fab fa-youtube' />
-                        </Link>
-                        <Link
-                            class='social-icon-link twitter'
-                            to='/https://twitter.com/StrongBodiezFL'
-                            target='/https://twitter.com/StrongBodiezFL'
-                            aria-label='Twitter'
-                        >
-                            <i class='fab fa-twitter' />
-                        </Link>
+                        
 
                     </div>
                 </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 // import { Container, Row, Col } from "reactstrap";
 import '../Auth0Profile/Auth0Profile.css'
+import Edit from '../Auth0Profile/Edit'
 import Logout from '../Auth0/AuthoLogout'
 
 const Profile = () => {
@@ -31,20 +32,20 @@ isAuthenticated && (
                         <div class="card-footer">
                             <div class="numbers">
                                 <div class="item">
-                                    <span></span>
+                                   
         </div>
                                 <div class="border"></div>
                                 <div class="item">
-                                    <span></span>
+                                    
         </div>
                                 <div class="border"></div>
                                 <div class="item">
-                                <span></span>
+                                
         </div> 
                             </div>
                             
 
-                            
+                            {/* <Edit/> */}
                             <Logout/>
                         </div>
                     </div>

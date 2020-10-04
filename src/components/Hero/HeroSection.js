@@ -1,39 +1,30 @@
 import React from 'react';
 import '../../App.css';
-import  Button  from '../Button/Button';
+import { Button } from '../Button/Button';
 import './HeroSection.css';
-
 
 function HeroSection() {
     return (
         <div className='hero-container'>
-            <video src='/' autoPlay loop muted />
-            <h1>Stay Strong with Strong Bodies!</h1>
+            <video src='/videos/video-1.mp4' autoPlay loop muted />
+            <h1>Stay Strong with Strong Bodiez!</h1>
             <p>What are you waiting for?</p>
-            
             <div className='hero-btns'>
-                <a href='https://www.freecodecamp.org/'><Button
+                <Button
                     className='btns'
                     buttonStyle='btn--outline'
                     buttonSize='btn--large'
-                
-                
-                > GET STARTED!
-                     
-                </Button>
-                
-                </a>
-
-                <Button
+                >
+                    GET STARTED
+        </Button>
+                {/* <Button
                     className='btns'
                     buttonStyle='btn--primary'
                     buttonSize='btn--large'
                     onClick={console.log('hey')}
                 >
                     WATCH TRAILER <i className='far fa-play-circle' />
-                </Button>
-
-                {/* <a href='https://www.freecodecamp.org/'><button>Link To freeCodeCamp</button></a> */}
+                </Button> */}
             </div>
         </div>
     );
