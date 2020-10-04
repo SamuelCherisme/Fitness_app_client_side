@@ -17,7 +17,7 @@ import Auth0Profile from './components/Auth0Profile/Auth0Profile'
 import Testimonals from "./components/Testimonals/Testimonals";
 import Blog from './components/Blog/Blog'
 import Auth0 from './components/Auth0/Auth0'
-
+const endpoint = "https://strongbackend.herokuapp.com/fitnessescom"
 const PORT = 'http://localhost:3000'
 
 

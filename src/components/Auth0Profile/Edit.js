@@ -14,7 +14,7 @@ export default function Edit(props) {
     useEffect(() => {
         (async () => {
             try {
-                const response = await fetch(`http://localhost:3000/fitnesses/${id}`);
+                const response = await fetch(`https://strongbackend.herokuapp.com/fitnessescom${id}`);
                 const data = await response.json();
                 await updateFitness(data);
             } catch (e) {
@@ -26,7 +26,7 @@ export default function Edit(props) {
         event.preventDefault();
         try {
             const submission = { ...fitness };
-            const response = await fetch(`http://localhost:3000/fitnesses/${id}`, {
+            const response = await fetch(`https://strongbackend.herokuapp.com/fitnessescom${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
